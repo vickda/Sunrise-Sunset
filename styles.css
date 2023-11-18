@@ -1,0 +1,169 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #f0f0f0; /* Soothing background color */
+    color: #333; /* Text color for the entire page */
+}
+
+header {
+    background-color: #333;
+    padding: 20px;
+    text-align: center;
+    color: #fff;
+}
+
+main {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 60px; /* Adjust this value based on your footer height */
+}
+
+#location-form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+label {
+    margin-right: 10px;
+    color: #555; /* Adjusted label color */
+}
+
+input {
+    padding: 10px;
+    /* margin-bottom: 10px; */
+    border: 1px solid #ccc; /* Adjusted border color */
+    background-color: #fff; /* Input background color */
+    color: #333; /* Input text color */
+    border-radius: 5px; /* Rounded corners for input */
+    transition: border-color 0.3s ease-in-out; /* Transition for smooth hover effect */
+    flex: 1; /* Take up remaining space */
+}
+
+input:hover,
+input:focus {
+    border-color: rgb(51, 51, 51); /* Highlight border on hover or focus */
+}
+
+button {
+    background-color: rgb(51, 51, 51);
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px; /* Rounded corners for button */
+    transition: background-color 0.3s ease-in-out; /* Transition for smooth hover effect */
+}
+
+button:hover {
+    background-color: #2980b9; /* Darker color on hover */
+}
+
+#result-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    justify-content: center;
+    text-align: center;
+}
+
+.big-card {
+    background-color: #333;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+    color: #fff; /* Text color for big card content */
+    margin-bottom: 20px;
+}
+
+.big-card h2 {
+    margin-bottom: 10px;
+    color: #bbb; /* Heading color for big card */
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.additional-info {
+    flex-grow: 1;
+}
+
+.additional-info h3 {
+    margin-bottom: 10px;
+    color: #bbb; /* Heading color for additional info */
+}
+
+.additional-info p {
+    color: #ccc; /* Text color for additional info content */
+}
+
+.cards-container {
+    display: flex;
+}
+
+.card {
+    background-color: #333;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+    color: #fff; /* Text color for card content */
+    margin-right: 10px;
+}
+
+.card img {
+    width: 80px; /* Adjust the icon size as needed */
+    height: 80px;
+}
+
+.card h3 {
+    margin-bottom: 10px;
+    color: #bbb; /* Heading color for card */
+}
+
+.card p {
+    color: #ccc; /* Text color for card content */
+}
+
+
+
+.additional-info {
+    margin-top: 20px;
+}
+
+.additional-info h3 {
+    margin-bottom: 10px;
+    color: #bbb; /* Heading color for additional info */
+}
+
+.additional-info p {
+    color: #ccc; /* Text color for additional info content */
+}
+
+
+
+
+footer {
+    background-color: #333;
+    padding: 10px;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    color: #bbb;
+}
+
+/* Media Query for Mobile Devices */
+@media only screen and (max-width: 600px) {
+    #location-form {
+        flex-direction: column;
+    }
+}

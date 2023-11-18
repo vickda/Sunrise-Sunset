@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Sunrise Sunset Dashboard</title>
+</head>
+<body>
+    <header>
+        <h1>Sunrise Sunset Dashboard</h1>
+    </header>
+    
+    <main>
+        <div id="location-form">
+            <label for="location-input">Enter Location:</label>
+            <input type="text" id="location-input" placeholder="City, Country">
+            <button onclick="getSunriseSunset()">Search</button>
+            <button onclick="getCurrentLocation()">Use Current Location</button>
+        </div>
+
+        <div id="result-container">
+            <!-- Sunrise and sunset data will be displayed here -->
+        </div>
+    </main>
+
+    <footer>
+        <p>Powered by <a href="https://sunrisesunset.io/api/" target="_blank">Sunrise Sunset API</a></p>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+</html>
