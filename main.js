@@ -1,3 +1,4 @@
+// Search Sunrise & Sunset Code using search
 function getSunriseSunset() {
     const locationInput = document.getElementById('location-input');
     const resultContainer = document.getElementById('result-container');
@@ -32,6 +33,7 @@ function getSunriseSunset() {
         });
 }
 
+// Use Current Location to get data
 function getCurrentLocation() {
     const resultContainer = document.getElementById('result-container');
 
