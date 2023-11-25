@@ -3,6 +3,7 @@ function getSunriseSunset() {
     const locationInput = document.getElementById('location-input');
     const resultContainer = document.getElementById('result-container');
     const location = locationInput.value.trim();
+    let countryname = null;
 
     if (!location) {
         alert('Please enter a valid location.');
@@ -13,6 +14,7 @@ function getSunriseSunset() {
     fetch(`https://geocode.maps.co/search?q=${location}`)
         .then(response => response.json())
         .then(data => {
+            countryname = data[0];
             if (data.length > 0) {
                 let nearestdata = data[0];
                 const { lat, lon } = nearestdata;
@@ -26,7 +28,8 @@ function getSunriseSunset() {
             const todayData = sunriseSunsetData.results.sunrise.split("T")[0];
             const tomorrowData = new Date(new Date().getTime() + 24 * 60 * 60 * 1000).toISOString().split("T")[0];
 
-            resultContainer.innerHTML = getHtmlCode(sunriseSunsetData, tomorrowData);
+            console.log(countryname['display_name']);
+            resultContainer.innerHTML = getHtmlCode(sunriseSunsetData, tomorrowData, countryname['display_name']);
         })
         .catch(error => {
             alert(`Error: ${error.message}`);
@@ -59,8 +62,9 @@ function getCurrentLocation() {
     }
 }
 
-const getHtmlCode = (sunriseSunsetData, tomorrowData) => {
+const getHtmlCode = (sunriseSunsetData, tomorrowData, countryname) => {
     return `
+    ${countryname ? `<h3>${countryname}</h3>` : `<h3>Results Found</h3>`}
     <div class="big-card">
         <h2>Today</h2>
         <div class="header-content">
