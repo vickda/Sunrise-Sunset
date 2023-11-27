@@ -110,6 +110,7 @@ button:hover {
 
 .cards-container {
     display: flex;
+    justify-content: center;
 }
 
 .card {
@@ -134,6 +135,8 @@ button:hover {
 .card p {
     color: #ccc; /* Text color for card content */
 }
+
+
 
 
 

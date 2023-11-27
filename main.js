@@ -80,7 +80,7 @@ const getHtmlCode = (sunriseSunsetData, tomorrowData, countryname) => {
                 <div class="icon">
                     <img src="sunrise sunset.jpg" alt="Sunrise icon">
                 </div>
-                <h3>Sunrise and Sunset</h3>
+                <h2>Sunrise and Sunset</h2>
                 <p>Sunrise: ${sunriseSunsetData.results.sunrise}</p>
                 <p>Sunset: ${sunriseSunsetData.results.sunset}</p>
             </div>
@@ -88,7 +88,7 @@ const getHtmlCode = (sunriseSunsetData, tomorrowData, countryname) => {
                 <div class="icon">
                     <img src="duskdawn.png" alt="Dawn icon">
                 </div>
-                <h3>Dawn and Dusk</h3>
+                <h2>Dawn and Dusk</h2>
                 <p>Dawn: ${sunriseSunsetData.results.dawn}</p>
                 <p>Dusk: ${sunriseSunsetData.results.dusk}</p>
             </div>
@@ -109,7 +109,7 @@ const getHtmlCode = (sunriseSunsetData, tomorrowData, countryname) => {
                 <div class="icon">
                     <img src="sunrise sunset.jpg" alt="Sunrise icon">
                 </div>
-                <h3>Sunrise and Sunset</h3>
+                <h2>Sunrise and Sunset</h2>
                 <p>Sunrise: ${new Date(tomorrowData + ' ' + sunriseSunsetData.results.sunrise).toLocaleTimeString()}</p>
                 <p>Sunset: ${new Date(tomorrowData + ' ' + sunriseSunsetData.results.sunset).toLocaleTimeString()}</p>
             </div>
@@ -117,7 +117,7 @@ const getHtmlCode = (sunriseSunsetData, tomorrowData, countryname) => {
                 <div class="icon">
                     <img src="duskdawn.png" alt="Dawn icon">
                 </div>
-                <h3>Dawn and Dusk</h3>
+                <h2>Dawn and Dusk</h2>
                 <p>Dawn: ${sunriseSunsetData.results.dawn}</p>
                 <p>Dusk: ${sunriseSunsetData.results.dusk}</p>
             </div>
